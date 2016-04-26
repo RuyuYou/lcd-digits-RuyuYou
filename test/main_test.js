@@ -1,9 +1,9 @@
 describe('Unit Test',function () {
     var inputs;
-    var allItems;
+    var allNumbers;
 
     beforeEach(function () {
-        allItems = loadAllItems ();
+        allNumbers = loadAllNumbers ();
         inputs = "910";
     });
 
@@ -19,15 +19,15 @@ describe('Unit Test',function () {
         });
     });
 
-    describe('buildItems()',function () {
+    describe('buildDisplay()',function () {
         it ('should print correct Items',function () {
             var inputs = [
                 '9',
                 '1',
                 '0'
             ];
-            var items = buildItems (inputs,allItems);
-            var expectItems = [
+            var lcdDisplay = buildDisplay (inputs,allNumbers);
+            var expectLcdDisplay = [
                 {
                     number:'9',
                     lcd :[
@@ -53,7 +53,7 @@ describe('Unit Test',function () {
                     ]
                 }
             ];
-            expect(items).toEqual(expectItems);
+            expect(lcdDisplay).toEqual(expectLcdDisplay);
         });
     });
 
@@ -100,10 +100,10 @@ describe('Unit Test',function () {
 
 
 describe('Integration Test',function () {
-    var allItems;
+    var allNumbers;
     var inputs;
     beforeEach(function () {
-        allItems = loadAllItems();
+        allNumbers = loadAllNumbers();
         inputs = "910";
     });
 
