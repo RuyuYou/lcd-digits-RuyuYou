@@ -1,4 +1,4 @@
-function loadAllItems() {
+function loadAllNumbers() {
   return [
     {
       number: '0',
